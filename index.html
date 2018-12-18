@@ -1,75 +1,108 @@
 <div class="container">
-  <!--<div class="take-input">
-     <input type="text" placeholder="Write any text" />
-    <a href="javascript:void(0);">Enter Text</a>
-  </div>-->
-        <div class="animate one">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate two">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate three">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate four">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate five">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate six">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
-
-        <div class="animate seven">
-            <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
-            <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
-      
-      <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
-        </div>
+.card.card-profile.text-center
+  %img.card-img-top{:src => "https://unsplash.it/340/160?image=354", :alt => ""}/
+  .card-block
+    %img.card-img-profile{:src => "https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140", :alt => ""}/
+    %h4.card-title
+      Nicola Pressi
+      %small Front-end designer
+    .card-links
+      %a.fa.fa-dribbble{:href => "#"}
+      %a.fa.fa-twitter{:href => "#"}
+      %a.fa.fa-facebook{:href => "#"}
     </div>
 html,body{height: 100%;}body{display: flex;flex-direction:column;align-items: center;justify-content:center;width:100%;background:#313940;}
 
+$bg-start: #9d9181;
+$bg-end: #9e866c;
+$card-bg: #e6e5e1;
+$dribbble-color: #ea4b89;
+$twitter-color: #68aade;
+$facebook-color: #3b5999;
 
-// Required
-// =========================================================================
+html {
+  min-height: 100%;
+    background: linear-gradient($bg-start, $bg-end);
+}
+<style type="text/css">
+body {
+    background-color: transparent;
+}
 
-.fm-logo {
-  $fm-logo-size: 300px;
-  $fm-stroke-gap: 1000;
-  height: auto;
-  max-width: 100%;
-  stroke-dasharray: $fm-stroke-gap;
-  stroke-dashoffset: $fm-stroke-gap;
-  width: $fm-logo-size;
-  path {
-    visibility: hidden;
+.card-profile {
+  width: 340px;
+  margin: 50px auto;
+  background-color: $card-bg;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 1em 1em 2em rgba(0,0,0,.2);
+  
+  .card-img-top {
+    border-radius: 0;
+  }
+
+  .card-img-profile {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-top: -95px;
+    margin-bottom: 35px;
+    border: 5px solid $card-bg;
+  }
+
+  .card-title {
+    margin-bottom: 50px;
+
+    small {
+      display: block;
+      font-size: .6em;
+      margin-top: .2em;
+    }
+  }
+  
+  .card-links {
+    margin-bottom: 25px;
+
+    .fa {
+      margin: 0 1em;
+      font-size: 1.6em;
+      
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+      
+      &.fa-dribbble {
+        color: $dribbble-color;
+        font-weight: bold;
+        
+        &:hover {
+          color: darken($dribbble-color, 10%);
+        }
+      }
+
+      &.fa-twitter {
+        color: $twitter-color;
+
+        &:hover {
+          color: darken($twitter-color, 10%);
+        }
+      }
+      
+      &.fa-facebook {
+        color: $facebook-color;
+
+        &:hover {
+          color: darken($facebook-color, 10%);
+        }
+      }
+    }
   }
 }
+</style>
+</body>
+</html>
+
+
 <script>
 var tmax_optionsGlobal = {
   repeat: -1,
