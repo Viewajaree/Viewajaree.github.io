@@ -2,8 +2,9 @@
     <head>
     <title>Profile</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-    <div class="controller">
+    </head>
+    
+    <<div class="controller">
   <ul class="sides">
     <li></li>
     <li></li>
@@ -49,7 +50,7 @@
 
 body { background-color: #357EC7;adding-top: 30px;}
 
-b@import url(https://fonts.googleapis.com/css?family=Squada+One);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
 *:after,
 *:before {
   content: '';
@@ -445,7 +446,6 @@ body {
   0% { transform: rotateX(-5deg); }
   100% { transform: rotateX(5deg); }
 }
-
 </style>
 </html>
 //
@@ -459,28 +459,20 @@ body {
 //
 //
 <script>
-var sky = document.getElementById("sky");
+/*
 
-sky.width = document.body.clientWidth;
-sky.height = document.body.clientHeight;
+Update 05 june: 
 
-if (sky.getContext){
-    var skyContext = sky.getContext("2d");
+- Got the 3D buttons working in Firefox by adding "transform-style: preserve-3d" to some elements. Without it the translateZ transforms will not work in FF.
+- Added sides and a backside to make a full rotation possible
 
-    var radius = 2;
+Update 11 june:
+- smoothed the animation
+- added a shadow (best viewed in Chrome with blur/filter support)
 
-    for(var star = 0; star < 50; star++){ 
-        var min = ( Math.random() * 30 + 5 ) / 10;
-        var max = sky.width - radius;
-
-        var centerX = Math.floor(Math.random() * (max - min + 1)) + min;
-        var centerY = Math.floor(Math.random() * (max - min + 1)) + min;
-
-        skyContext.beginPath();
-        skyContext.arc(centerX, centerY, min, 0, 2 * Math.PI);
-
-        skyContext.fillStyle = "rgb(255, 255, 255)";
-        skyContext.fill();
+Update 13 june:
+- tilting directional buttons
+*/
     }
 }
   </script>
