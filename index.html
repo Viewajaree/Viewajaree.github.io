@@ -9,245 +9,123 @@
 
 body { background-color: #357EC7;adding-top: 30px;}
 
-#hi-alien {
-  width: 500px;
-  margin: 0 auto;
-  color: white;
-  font-size: 3em;
+body, html {
+  height: 100%;
+  color: #fff;
+}
+<input id="manual" type="checkbox"> <label for="manual">Interactive mode (mouse hover)</label>
+<div class="cube" id="red">
+  <div class="face">R</div>
+  <div class="face">r</div>
+</div>
+
+<div class="cube" id="green">
+  <div class="face">G</div>
+  <div class="face">g</div>
+</div>
+
+<div class="cube" id="blue">
+  <div class="face">B</div>
+  <div class="face">b</div>
+</div>
+
+body {
+  font: bold 90%/1.2 Arial;
+  perspective: 500px;
+  background: #000;
   text-align: center;
-  margin-bottom: 20px;
 }
-#head {
-  position: relative;
-  margin: 0 auto;
-  width: 200px;
-  height: 120px;
-  background-color: #94ec3f;
-  border-radius: 100%;
-  z-index: 8;
-}
-#antenna {
-  margin: 0 auto;
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 60px solid #94ec3f;
-  border-radius: 40%;
-  margin-bottom: -10px;
-  position:relative;
-}
-#antenna::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #94ec3f;
+
+/* cube */
+
+.cube {
   position: absolute;
-  top: 0px;
-  left: -10px;
-}
-.ear {
-  position: absolute;
-  display: block;
-  width: 30px;
-  height: 70px;
-  background-color: #94ec3f;
-  border-radius: 50%;
-}
-#left-ear {
-  top: 10px;
-  left: -16px;
-}
-#right-ear {
-  top: 10px;
-  right: -16px;
-}
-#eyes {
-  text-align: center;
-  padding-top: 30px;
-}
-.eye {
-  display: inline-block;
-  background-color: black;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  margin-right: 10px;
-  border: 12px solid white;
-}
-.eye:last-child {
-  margin-right: 0;
-}
-.mouth {
-  margin: 0 auto;
-  width: 80px;
-  height: 20px;
-  border-radius: 50%;
-  box-shadow: 0 1px 0 0 black;
-  position: relative;
-}
-.mouth::before {
-  position: absolute;
-  top: 8px;
-  left: -8px;
-  z-index: 100;
-  content: "";
-  width: 10px;
-  height: 5px;
-  border-radius: 100%;
-  box-shadow: 0 1px 0 0 black;
-  transform: rotate(290deg);
-}
-.mouth::after {
-  position: absolute;
-  top: 8px;
-  right: -7px;
-  z-index: 100;
-  content: "";
-  width: 10px;
-  height: 5px;
-  border-radius: 100%;
-  box-shadow: 0 1px 0 0 black;
-  transform: rotate(70deg);
-}
-#alien-body {
-  position: relative;
-  margin: 0 auto;
-  width: 180px;
-  height: 150px;
-  background-color: #5CB3FF;
-  border-radius: 40%;
-  margin-top: -40px;
-}
-#alien-body::before {
-  position: absolute;
-  display: block;
-  content: "";
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
   width: 150px;
-  height: 80px;
-  border-radius: 40%;
-  top: -50px;
-  left: 15px;
-  box-shadow: 0 20px 0 0 #842DCE;
+  height: 150px;
+  line-height: 150px;
+  text-align:center;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
 }
-.arm {
-  width: 30px;
-  height: 70px;
-  background-color: #5CB3FF;
+
+.face {
   position: absolute;
-  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-position: 0 100%;
+  background-size: 100% 400%;
+  backface-visibility: hidden;
+  transition: background-position 1s;
+  font-size: 600%;
+  color: #000;
 }
-#left-arm {
-  transform: rotate(230deg);
-  left: -15px;
-  top: 24px;
-  z-index: -10;
+
+/* transform the faces and use a big grad for shading */
+
+.face:first-child {
+  transform: rotateX(90deg) translateY(50%) rotateX(-90deg);
+  background-image: linear-gradient(rgba(0,0,0,1) 10%, rgba(0,0,0,0) 66%);
 }
-.hands {
-  width: 12px;
-  height: 30px;
-  position: absolute;
-  top: -18px;
-  left: 22px;
-  background-color: #94ec3f;
-  border-radius: 30px;
-  transform: rotate(30deg);
+.face:last-child {
+  transform: translateY(50%) rotateX(-90deg) ;
+  background-image: linear-gradient(rgba(0,0,0,0) 33%, rgba(0,0,0,1) 90%);
 }
-.hands::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 12px;
-  height: 30px;
-  background-color: #94ec3f;
-  border-radius: 30px;
-  top: -5px;
-  right: 16px;
-  transform: rotate(-30deg);
+
+
+/* some test candidates */
+
+#red {
+  left: 25%;
 }
-.hands::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 12px;
-  height: 20px;
-  background-color: #94ec3f;
-  border-radius: 30px;
-  top: 16px;
-  right: 22px;
-  transform: rotate(130deg);
+#red .face {
+  background-color: #c33;
 }
-#right-arm{
-  transform: rotate(120deg);
-  right: -20px;
-  top: 20px;
+#green {
+  left: 50%;
+  z-index: 1;
 }
-.arm::before{
-  display: block;
-  content: "";
-  background-color: #94ec3f;
-  width: 30px;
-  height: 24px;
-  border-radius: 100%;
-  postion: absoulte;
-  margin-top: -10px;
+#green .face {
+  background-color: #ad3;
 }
-#legs {
-  border-top: 20px solid #151B8D;
-  width: 180px;
-  height: 50px;
-  margin: 0 auto;
-  z-index: 10;
-  position: absolute;
-  top: 90px;
-  background-color: #5CB3FF; 
+#blue {
+  left: 75%;
 }
-#legs::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 30px;
-  background-color: #151B8D;  
-  margin: 0 auto;
-  margin-top: -25px;
-  border-radius: 5px;
+#blue .face {
+  background-color: #3ac;
 }
-#left-foot {
-  position: absolute;
-  bottom: -12px;
-  left: -20px;
-  z-index: 120;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 30px solid #151B8D;
-  border-radius: 20px;
+
+/* use the checkbox to toggle manual / autoplay */
+
+/* auto-play */
+#manual:not(:checked) ~ .cube {
+  animation: rotate 1s alternate infinite ease-in-out;
 }
-#right-foot {
-  position: absolute;
-  bottom: -12px;
-  right: -20px;
-  z-index: 150;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 30px solid #151B8D;
-  border-radius: 20px;
+#manual:not(:checked) ~ .cube .face {
+  animation: shade 1s alternate infinite ease-in-out;
 }
-#right-foot::before{
-  content: "";
-  display:block;
-  position: absolute;
-  top: -1px;
-  left: -91px;
-  border-left: 3px solid #488AC7;
-  height: 28px;
-  z-index: 300;
+@keyframes rotate {
+  to { transform: translateZ(-100px) rotateX(90deg); }
 }
+@keyframes shade {
+  to { background-position: 0 0 }
+}
+
+
+/* hover to animate */
+#manual:checked ~ .cube:hover {
+  transform: translateZ(-100px) rotateX(90deg);
+}
+#manual:checked ~ .cube:hover > .face:first-child,
+  #manual:checked ~ .cube:hover > .face:last-child {
+    background-position: 0 0
+}
+
 
 </style>
 </html>
