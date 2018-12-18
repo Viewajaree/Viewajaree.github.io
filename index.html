@@ -7,95 +7,393 @@
   <body>
 
 
-    <svg class="gate" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 536.52">
-        <title>Gate</title>
-        <rect x="0.5" y="0.5" width="39" height="500" style="fill:#333"/ >
-   <path d="M669,304V803H631V304h38m1-1H630V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-<rect x="70.5" y="0.5" width="39" height="500" style="fill:#333"/>
-            <path d="M739,304V803H701V304h38m1-1H700V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="140.5" y="0.5" width="39" height="500" style="fill:#333"/>
-            <path d="M809,304V803H771V304h38m1-1H770V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="210.5" y="0.5" width="39" height="500" style="fill:#333"/>
-            <path d="M879,304V803H841V304h38m1-1H840V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="280.5" y="0.5" width="39" height="500" style="fill:#333"/>
-            <path d="M949,304V803H911V304h38m1-1H910V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="350.5" y="0.5" width="39" height="500" style="fill:#333"/>
-            <path d="M1019,304V803H981V304h38m1-1H980V804h40V303Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="0.5" y="371.5" width="389" height="39" style="fill:#333"/>
-            <path d="M1019,675v38H631V675h388m1-1H630v40h390V674Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <rect x="0.5" y="90.5" width="389" height="39" style="fill:#333"/>
-            <path d="M1019,394v38H631V394h388m1-1H630v40h390V393Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="0.85 501.5 39.15 501.5 20 535.5 0.85 501.5" style="fill:#333"/>
-            <path d="M668.29,805,650,837.49,631.71,805h36.58m1.71-1H630l20,35.52L670,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="70.86 501.5 109.14 501.5 90 535.5 70.86 501.5" style="fill:#333"/>
-            <path d="M738.29,805,720,837.49,701.71,805h36.58m1.71-1H700l20,35.52L740,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="140.85 501.5 179.15 501.5 160 535.5 140.85 501.5" style="fill:#333"/>
-            <path d="M808.29,805,790,837.49,771.71,805h36.58m1.71-1H770l20,35.52L810,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="210.85 501.5 249.15 501.5 230 535.5 210.85 501.5" style="fill:#333"/>
-            <path d="M878.29,805,860,837.49,841.71,805h36.58m1.71-1H840l20,35.52L880,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="280.86 501.5 319.14 501.5 300 535.5 280.86 501.5" style="fill:#333"/>
-            <path d="M948.29,805,930,837.49,911.71,805h36.58m1.71-1H910l20,35.52L950,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            <polygon points="350.86 501.5 389.14 501.5 370 535.5 350.86 501.5" style="fill:#333"/>
-            <path d="M1018.29,805,1000,837.49,981.71,805h36.58m1.71-1H980l20,35.52L1020,804Z" transform="translate(-630 -303)" style="fill:#333"/>
-            </svg>
-    <img class="stonearchway" src="https://preview.ibb.co/nvHe1e/Stone_Archway.png">
-
-    <div class="forbiddenmessage">
-      <h1>Profile</h1>
-      
-    </div>
+ <div class="squirtle">
+  <div class="tail"></div>
+  <div class="body">
+    <div class="stomach"></div>
+    <div class="shell"></div>
+  </div>
+  <div class="head">
+    <div class="eye"></div>
+    <div class="eye"></div>
+    <div class="mouth"></div>
+  </div>
+  <div class="leg back"></div>
+  <div class="leg"></div>
+  <div class="arm back"></div>
+  <div class="arm"></div>
+</div>
   </body>
+    
+    
   <style type="text/css">
-    .gate {
-  width: 300px;
-  margin: auto;
-  display: block;
-  position: relative;
-  top: 20px;
-  animation-name: gate-slam;
-  animation-duration: 1s;
-}
-.stonearchway {
-  width: 400px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: auto;
-  display: block;
-}
-    body {
-          background: #1a1a1a;
-          position: relative;
-          margin: 0;
-          }
-    @keyframes gate-slam {
-  0% {top: -1000px;}
-  100% {top: 20px;}
-}
+     { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body { font-size: 100%; } /* Controls Size */
 
-@keyframes text-appear {
-  0% {opacity: 0;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-.forbiddenmessage {
-  color: white;
-  font-family: arial;
-
+.squirtle {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-
-  animation-name: text-appear;
-  animation-duration: 2.5s;
+  width: 20em;
+  height: 20em;
+  margin: -10em;
+  //transform: translate(-50%,-50%);
+  animation: bounce 250ms infinite linear alternate;
 }
 
-h1, h3 {
-  margin: 0;
+.squirtle::after {
+  content: '';
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 20%;
+  margin-left: -30%;
+  //transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  animation: bounce 250ms infinite linear alternate-reverse;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6em;
+  height: 6em;
+  margin: 4em 0 0 -1em;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  background-color: #fe9;
+  border: 0.375em solid #555;
+  border-radius: 10% 10% 50% 50% / 50%;
+}
+
+.body::before,
+.body::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 2.25em;
+  left: -1em;
+  width: 1.25em;
+  height: 1.5em;
+  transform: rotate(55deg);
+  background-color: #fe9;
+  border: 0.25em solid #555;
+  border-radius: 10%;
+}
+
+.body::after {
+  z-index: 0;
+  top: 4.825em;
+  left: 1.375em;
+  height: 1.25em;
+  transform: skewX(10deg) rotate(40deg);
+  box-shadow:
+    0.375em -3.375em #fe9,
+    0.125em -3.0625em #555;
+}
+
+.stomach {
+  position: absolute;
+  bottom: 3.25em;
+  left: -1.125em;
+  width: 115%;
+  height: 100%;
+  border: 0.25em solid transparent;
+  border-bottom-color: #555;
+  border-radius: 50%;
+  box-shadow:
+    0 1.25em #fe9,
+    0 1.5em #555;
+}
+
+.stomach::before {
+  content: '';
+  position: absolute;
+  bottom: -4.125em;
+  left: 2.25em;
+  width: 40%;
+  height: 100%;
+  transform: rotate(-10deg);
+  border: 0.25em solid transparent;
+  border-left-color: #555;
+  border-radius: 50%;
+}
+
+.shell {
+  position: absolute;
+  top: 0;
+  left: 0.25em;
+  z-index: 1;
+  width: 100%;
+  height: 115%;
+  border-radius: 10% 10% 50% 50% / 50%;
+  box-shadow:
+    inset -0.5em 0 #953,
+    inset -1em 0 #a63,
+    inset -1.25em 0 #555,
+    inset -1.75em 0 #fff,
+    inset -2em 0 #555;
+}
+
+.tail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4.5em;
+  height: 5.5em;
+  margin: 0.25em 0 0 -0.5em;
+  transform-origin: 2.5em 100%;
+  //transform: translate(-50%,-50%);
+  background-color: #6bc;
+  border: 0.325em solid #555;
+  border-radius: 50%;
+  animation: bounce2 250ms infinite linear alternate;
+}
+
+.tail::before,
+.tail::after {
+  content: '';
+  position: absolute;
+  top: -2em;
+  left: 2.25em;
+  width: 5em;
+  height: 5.5em;
+  background-color: inherit;
+  border: 0.325em solid #555;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.tail::after {
+  top: 0.375em;
+  left: 2.625em;
+  width: 2.5em;
+  height: 2.75em;
+  transform: translateX(1%);
+  background-color: transparent;
+  border: 0.325em solid #555;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.head {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 10em;
+  height: 10em;
+  margin: -8.25em 0 0 -5.5em;
+  //transform: translate(-50%,-50%);
+  background-color: #7cd;
+  border: 0.325em solid #555;
+  border-radius: 50%;
+  animation: bounce2 250ms infinite linear alternate;
+}
+
+.head::before {
+  content: '';
+  position: absolute;
+  bottom: -0.0625em;
+  right: 1.625em;
+  width: 8.25em;
+  height: 5em;
+  transform: rotate(10deg);
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 0.325em #555;
+}
+
+.head::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow: inset -0.5em 0.25em #6bc;
+}
+
+.eye {
+  position: absolute;
+  z-index: 1;
+  top: 5em;
+  left: 4em;
+  width: 2em;
+  height: 2.825em;
+  overflow: hidden;
+  background-color: #555;
+  border: 0.1875em solid #555;
+  border-radius: 50% / 60% 60% 40% 40%;
+  box-shadow: inset 0 -0.375em #a63;
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  top: 0.375em;
+  right: 0.25em;
+  width: 30%;
+  height: 30%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.eye:first-child {
+  top: 4em;
+  left: 0.5em;
+  width: 1.5em;
+  height: 2.25em;
+  border: 0.125em solid #555;
+  box-shadow: inset 0 -0.25em #a63;
+}
+
+.mouth {
+  position: absolute;
+  z-index: 1;
+  bottom: 0.75em;
+  left: 2em;
+  width: 1.125em;
+  height: 1.75em;
+  background-color: #fcc;
+  border: 0.125em solid #555;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 1.125em 0 -0.0625em #f55,
+    inset 0 1.1875em #555;
+}
+
+.mouth::before {
+  content: '';
+  position: absolute;
+  top: -0.25em;
+  right: -0.825em;
+  width: 3em;
+  height: 1em;
+  transform: rotate(20deg);
+  background-color: #7cd;
+  border: 0.125em solid transparent;
+  border-bottom-color: #555;
+  border-radius: 50%;
+}
+
+.mouth::after {
+  content: '';
+  position: absolute;
+  top: -6.5em;
+  right: -0.825em;
+  width: 2em;
+  height: 2em;
+  transform: rotate(-20deg) scaleY(0.75);
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  box-shadow:
+    -1.5em 0.5em 0 -0.625em rgba(255,255,255,0.25),
+    -4.125em 4.5em 0 -0.625em rgba(255,200,200,0.8),
+    0.75em 10em 0 -0.5em rgba(255,200,200,0.8);
+}
+
+.leg {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 2.5em;
+  height: 3em;
+  margin: 5.25em 0 0 -1em;
+  transform-origin: 50% 1em;
+  //transform: rotate(-15deg) translate(-50%,-50%);
+  background-color: #7cd;
+  border: 0.325em solid #555;
+  border-radius: 50% / 50% 50% 50% 30%;
+  animation: swing 500ms infinite linear alternate;
+}
+
+.leg::before {
+  content: '';
+  position: absolute;
+  bottom: -0.325em;
+  right: 0.325em;
+  width: 2.25em;
+  height: 1.5em;
+  transform: rotate(15deg);
+  background-color: inherit;
+  border: 0.325em solid #555;
+  border-radius: 50% 50% 50% 50% / 80% 50% 50% 30%;
+}
+
+.leg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50% / 50% 50% 50% 30%;
+  box-shadow: inset -0.375em 0.25em #6bc;
+}
+
+.leg.back {
+  z-index: -1;
+  width: 2.25em;
+  height: 2.75em;
+  margin: 5em 0 0 -3.75em;
+  //transform: rotate(-20deg) translate(-50%,-50%);
+  background-color: #6bc;
+  animation-delay: -500ms;
+}
+
+.arm {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 3em;
+  margin: 2.125em 0 0 -0.25em;
+  transform-origin: 50% 1em;
+  //transform: rotate(-25deg) translate(-50%,-50%);
+  background-color: #7cd;
+  border: 0.325em solid #555;
+  border-radius: 80% 80% 80% 60% / 60% 60% 60% 80%;
+  box-shadow: inset -0.375em 0.25em #6bc;
+  animation: swing 500ms -500ms infinite linear alternate;
+}
+
+.arm.back {
+  z-index: -1;
+  margin: 1.75em 0 0 -4em;
+  //transform: rotate(25deg) translate(-50%,-50%);
+  background-color: #6bc;
+  animation-name: swing2;
+  animation-delay: -1000ms;
+}
+
+/* Animation */
+
+@keyframes swing {
+  0% { transform: rotate(-60deg); }
+  100% { transform: rotate(10deg); }
+}
+
+@keyframes swing2 {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(60deg); }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-0.25em); }
+}
+
+@keyframes bounce2 {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(2deg); }
 }
 </style>
 </html>
