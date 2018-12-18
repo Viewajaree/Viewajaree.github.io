@@ -4,224 +4,681 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
-
-
-<section class="stage">
-
-    <svg height="390" width="550" id="mountains">
-        <polygon points="300,390 190,90 320,130 400,340" fill="#5d2042" />
-        <polygon points="0,340 108,190 194,100 201,120 301,390" fill="#320e40" />
-        <polygon points="14,348 117,174 194,102 172,377" fill="#3b1642" fill-opacity="0.8" />
-        <polygon points="120,174 194,102 233,206 144,275" fill="#3d1744" fill-opacity="0.9" />
-
-        <polygon points="233,206 288,177 324,214" fill="#421943" />
-        <polygon points="233,206 324,214 247,245" fill="#3e1743" />
-        <polygon points="247,245 324,214 360,360" fill="#411842" />
-        <polygon points="324,214 288,177 350,210" fill="#632242" />
-        <polygon points="324,214 350,210 360,360" fill="#652343" />
-
-        <g id="apex">
-            <polygon points="108,190 170,40 194,100" fill="#aeacb9" />
-            <polygon points="170,40 234,6 260,70 288,178 194,102" fill="#ceced8" />
-            <polygon points="234,6 290,80 320,132 288,178" fill="#ffffed" />
-        </g>
-    </svg>
-
-    <svg height="347" width="168" id="cloud1">
-        <g>
-            <polygon points="0,30 8,19 27,18 22,36 9,37" fill="#d5d6e2" />
-            <polygon points="0,30 9,37 3,50" fill="#c7c2d1" />
-            <polygon points="3,50 9,37 22,36 33,44 14,55" fill="#a8a9b7" />
-            <polygon points="14,55 33,44 36,52 23,58" fill="#7a7789" />
-            <polygon points="27,18 22,36 33,44" fill="#acabb9" />
-
-            <polygon points="31,11 51,4 66,1 83,13 83,23 78,23" fill="#fff6e7" />
-            <polygon points="27,18 31,11 54,6 56,32 33,40 29,36" fill="#d0d0dc" />
-            <polygon points="29,36 58,65 42,67 31,57" fill="#9694a3" />
-            <polygon points="33,40 56,32 75,37 58,65" fill="#a2a1b1" />
-            <polygon points="58,65 75,37 82,57" fill="#9897a7" />
-            <polygon points="56,32 54,6 80,14 82,57 75,37" fill="#d7d6e2" />
-
-            <polygon points="80,15 84,17 88,30 85,50 81,51" fill="#9d9da9" />
-            <polygon points="90,16 82,20 81,31 95,35" fill="#cdcdda" />
-            <polygon points="81,31 82,47 95,35" fill="#a2a2b0" />
-            <polygon points="82,47 95,35 105,45 91,53" fill="#878892" />
-            <polygon points="105,45 95,35 106,22" fill="#fbe5d5" />
-            <polygon points="106,22 95,35 90,16" fill="#dbd6dd" />
-        </g>
-    </svg>
-
-    <svg height="347" width="168" id="cloud2">
-        <g transform="scale(0.5)">
-            <polygon points="0,30 8,19 27,18 22,36 9,37" fill="#d5d6e2" />
-            <polygon points="0,30 9,37 3,50" fill="#c7c2d1" />
-            <polygon points="3,50 9,37 22,36 33,44 14,55" fill="#a8a9b7" />
-            <polygon points="14,55 33,44 36,52 23,58" fill="#7a7789" />
-            <polygon points="27,18 22,36 33,44" fill="#acabb9" />
-
-            <polygon points="31,11 51,4 66,1 83,13 83,23 78,23" fill="#fff6e7" />
-            <polygon points="27,18 31,11 54,6 56,32 33,40 29,36" fill="#d0d0dc" />
-            <polygon points="29,36 58,65 42,67 31,57" fill="#9694a3" />
-            <polygon points="33,40 56,32 75,37 58,65" fill="#a2a1b1" />
-            <polygon points="58,65 75,37 82,57" fill="#9897a7" />
-            <polygon points="56,32 54,6 80,14 82,57 75,37" fill="#d7d6e2" />
-
-            <polygon points="80,15 84,17 88,30 85,50 81,51" fill="#9d9da9" />
-            <polygon points="90,16 82,20 81,31 95,35" fill="#cdcdda" />
-            <polygon points="81,31 82,47 95,35" fill="#a2a2b0" />
-            <polygon points="82,47 95,35 105,45 91,53" fill="#878892" />
-            <polygon points="105,45 95,35 106,22" fill="#fbe5d5" />
-            <polygon points="106,22 95,35 90,16" fill="#dbd6dd" />
-        </g>
-    </svg>
-
-    <svg id="ground"></svg>
-
-    <svg id="hills" width="700" height="170">
-        <polygon points="480,70 530,100 560,90 516,40" fill="#9b9d57" />
-        <polygon points="480,70 530,100 412,84" fill="#7d8f57" />
-        <polygon points="530,100 412,84 360,138" fill="#748857" />
-        <polygon points="360,138 240,140 320,82" fill="#748857" />
-
-        <polygon points="412,84 360,140 320,82" fill="#88945a" />
-        <polygon points="320,82 240,140 210,64" fill="#597252" />
-        <polygon points="300,78 100,100 0,104 170,58" fill="#4f654f" />
-        <polygon points="172,58 145,40 122,48 66,79 0,104" fill="#536a50" />
-    </svg>
-
-    <svg class="trees">
-        <g class="tree" id="tree" transform="translate(400,30)">
-            <polygon points="25,75 27,44 21,34 25,33 30,41 38,33 40,34 31,46 29,75" fill="#3f2145" />
-            <polygon points="29,75 31,46 32,45 32,74" fill="#812743" />
-
-            <polygon points="2,21 11,33 20,32 27,29 32,23 24,35 11,34" fill="#282246" />
-            <polygon points="27,29 33,13 18,0 29,2 37,13 32,23" fill="#6a7749" />
-
-            <polygon points="33,23 35,32 45,37 55,27 44,35 37,31" fill="#210f3f" />
-            <polygon points="37,31 38,17 46,17 50,31" fill="#354346" />
-            <polygon points="37,31 50,31 45,37" fill="#292941" />
-            <polygon points="33,23 37,31 38,17" fill="#2b2d42" />
-            <polygon points="38,17 46,17 46,11" fill="#495e4b" />
-            <polygon points="46,17 46,11 54,18" fill="#5b7049" />
-            <polygon points="44,11 54,18 56,26 50,31" fill="#515d49" />
-
-            <polygon points="11,33 20,32 27,29 15,19" fill="#292e42" />
-            <polygon points="27,29 33,13 15,19" fill="#424f46" />
-            <polygon points="33,13 18,0 15,19" fill="#48604a" />
-            <polygon points="18,0 7,5 15,19" fill="#3a5449" />
-            <polygon points="7,5 0,18 15,19" fill="#344847" />
-            <polygon points="0,18 11,33 15,19" fill="#292c4b" />
-
-            <polygon points="175,4 121,10 53,12 12,16 5,20 47,22 122,12 180,4" fill="#648155" transform="translate(-148,70)" />
-        </g>
-
-        <use x="-215" y="-23" xlink:href="#tree" transform="scale(0.8)" />
-        <use x="-220" y="-20" xlink:href="#tree" />
-        <use x="540" y="-30" xlink:href="#tree" />
-        <use x="480" y="-20" xlink:href="#tree" />
-        <use x="440" y="-15" xlink:href="#tree" transform="scale(1.2)" />
-
-    </svg>
-
-    <canvas id="sky"></canvas>
-
-
-</section>
-  </body>
+  <https://www.w3schools.com/bootstrap4/
     
     
   <style type="text/css">
-$darkblue: #152c3e;
-$lightblue: #37618a;
-$greenprimary: #879759;
-$greenshadow: #648459;
-
-* { margin: 0; padding: 0; }
-
-@media (max-width: 960px) {
-  body { zoom: 0.7; }
-}
-
-html, body { height: 100%; }
-
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  } to {
-    transform: translateY(-4px);
-  }
-}
-
-@keyframes sway {
-  from {
-    transform: translateX(0px);
-  } to {
-    transform: translateX(-12px);
-  }
-}
+* {margin: 0; padding: 0}
 
 body {
-    min-height: 100%;
-    background: -webkit-linear-gradient(top, $darkblue, $lightblue);
+    position: absolute;
+    text-align: center;
+    font-family: "Myriad Pro";
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+*, *:before, *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+ul {  margin-bottom: 1.25rem;
+}
+
+ul.no-bullet {
+list-style: none;
+}
+
+.inline-list {
+  margin: 0 auto 1.0625rem auto;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+  .inline-list > li {
+    list-style: none;
+    float: left;
+    margin-left: 1.375rem;
+    display: block; }
+    .inline-list > li > * {
+      display: block; }
+
+
+.main {
+    background-color: #0c3545;
+    height: 100%;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.cloud_left {
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    top: 60px;
+    left: 60px;
+    z-index:999;
+}
+
+.cloud {
+    background: white;
+    border-radius: 50%;
+    display: block;
+}
+
+.cloud_left ul , .land_tree ul {
+    margin: 0px
+}
+
+.cloud_left li:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    margin: 30px 0px 0px 0px;
+}
+
+.cloud_left li:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    margin: 0px 0px 0px -10px;
+}
+
+.cloud_left li:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    margin: 23px 0px 0px -7px;
+}
+
+
+.cloud_right {
+    width: 150px;
+    height: 50px;
+    overflow: hidden;
+    top: 100px;
+    right: 240px;
+    z-index: 2;
+}
+
+.cloud_right ul , .land_tree ul {
+    margin: 0px
+}
+
+.cloud_right li:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    margin: 36px 0px 0px 1px;
+}
+
+.cloud_right li:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    margin: 0px 0px 0px -11px;
+}
+
+.cloud_right li:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    margin: 31px 0px 0px -13px;
+}
+
+.sea {
+    width: 100%;
+    height: 30px;
+    background: #2a94d6;
+    bottom:7px;
+}
+
+.sea:after {
+    content: '';
+    position: absolute;
+    height: 12px;
+    background: #1D7FBB;
+    bottom: -10px;
+    width: 100%;
+    left: 0px;
+}
+
+.sea span {
+    background-color: #8bd9f5;
+    position: absolute;
+}
+
+.wave1 {
+    width: 100px;
+    height: 3px;
+    left: 420px;
+    top: 10px;
+}
+
+.wave2 {
+    width: 100px;
+    height: 3px;
+    left: 433px;
+    top: 13px;
+}
+
+.wave3 {
+    width: 50px;
+    height: 3px;
+    right: 460px;
+    top: 15px;
+}
+
+.wave4 {
+    width: 50px;
+    height: 3px;
+    right: 467px;
+    top: 18px;
+}
+
+.landscape {
+    bottom: 15px;
+    width: 400px;
+    height: 170px;
+    z-index: 3;
+}
+
+.max_right {
+    right: 0px
+}
+
+.max_right .grass {
+    left:20px;
+}
+
+.max_right .grass:after {
+    right: 0px;
+    bottom: 40px;
+}
+
+.max_right .land_tree {
+    bottom: 40px;
+    left: 30px;
+}
+
+.grass {
+    width: 100%;
+    height: 40px;
+    left: -20px;
+    border-radius: 50px;
+    position: absolute;
+    background: #126c48;
+    bottom: 0px;
+    display: block;
+    z-index: 1
+}
+
+.grass:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 40px;
+    border-radius: 50px;
+    background: #219065;
+    bottom: 36px;
+}
+
+.leftt-gras {
+    right: 40px !important;
+}
+
+.land_tree {
+    width: auto;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    overflow: hidden;
+}
+
+.land_tree li {
+    border-radius: 50%;
+}
+
+.land_tree li:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    margin: 30px 0px 0px 0px;
+    background: #219065;
+}
+
+.land_tree li:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    margin: 0px 0px 0px -10px;
+    background: #126c48;
+}
+
+.land_tree li:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    margin: 23px 0px 0px -7px;
+    background: #219065;
+}
+
+.tree1 {
+    background: #21904b;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    border-right: 5px solid #157C3C;
+    border-bottom: 5px solid #157C3C;
+    z-index: -1;
+    right: 100px;
+    bottom: 120px;
+}
+
+.tree1:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 50px;
+    background: #FFF;
+    margin: 30px 0px 0px 3px;
+    top: 35px;
+}
+
+.tree2 {
+    background: #26a76f;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-right: 5px solid #17955e;
+    border-bottom: 5px solid #17955e;
+    z-index: -1;
+    right: 150px;
+    bottom: 80px;
+}
+
+.tree2:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 50px;
+    background: #FFF;
+    margin: 23px 10px 0px 0px;
+    top: 27px;
+}
+
+.boat {
+    bottom: 10px;
+    z-index: 1;
+    -webkit-animation: boatanimate 30s linear infinite;
+    -moz-animation: boatanimate 30s linear infinite;
+    -o-animation: boatanimate 30s linear infinite;
+    animation: boatanimate 30s linear infinite;
+}
+
+@-webkit-keyframes boatanimate {
+    0% {right:250px;}
+    100% {right:1040px;}
+}
+
+@-moz-keyframes boatanimate {
+    0% {right:250px;}
+    100% {right:1040px;}
+}
+
+@-o-keyframes boatanimate {
+    0% {right:250px;}
+    100% {right:1040px;}
+}
+
+@keyframes boatanimate {
+    0% {right:250px;}
+    100% {right:1040px;}
+}
+
+.boat-body {
+    width: 100px;
+    height: 20px;
+    background: #e25c45;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 20px;
+}
+
+.white-body {
+    width: 65px;
+    height: 16px;
+    background: #FFF;
+    margin: 0px 13px;
+    border-top-left-radius: 20px;
+}
+
+.windows {
+    margin: 0px 12px !important;
+}
+
+
+.boat .circle {
+    background: #a18e6e;
+    width: 7px;
+    height: 7px;
+    margin: 5px 3px;
+    border-radius: 50%;
+}
+
+.smokestack {
+    width: 10px;
+    height: 17px;
+    background: #a18e6e;
+    bottom: 30px;
+    margin-left: 45px;
+}
+
+
+.plane {
+    top: 40%;
+    left: 80px;
+    -webkit-animation: planeanimate 30s linear infinite;
+    -moz-animation: planeanimate 30s linear infinite;
+    -o-animation: planeanimate 30s linear infinite;
+    animation: planeanimate 30s linear infinite;
+}
+
+@-webkit-keyframes planeanimate {
+    0% {left:-10%;}
+    100% {left:110%;}
+}
+
+@-moz-keyframes planeanimate {
+    0% {left:-10%;}
+    100% {left:110%;}
+}
+
+@-o-keyframes planeanimate {
+    0% {left:-10%;}
+    100% {left:110%;}
+}
+
+@keyframes planeanimate {
+    0% {left:-10%;}
+    100% {left:110%;}
+}
+
+.plane-body {
+    width: 90px;
+    height: 15px;
+    background: #FFF;
+    border-bottom: 4px solid #ECECEC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.plane .circle {
+    width: 5px;
+    height: 5px;
+    background: #E25C45;
+    border-radius: 50%;
+    margin: 4px 5px 0 0;
+    float: right;
+}
+
+.wing1 {
+    background: #E25C45;
+    width: 15px;
+    height: 20px;
+    float: right;
+    bottom: 3px;
+    position: absolute;
+    right: 35px;
+}
+
+.wing1:after {
+    position: absolute;
+    content: '';
+    background: #0C3545;
+    width: 7px;
+    height: 28px;
+    right: -3px;
+    -webkit-transform: rotate(14deg);
+    -moz-transform: rotate(14deg);
+    -o-transform: rotate(14deg);
+    transform: rotate(14deg);
+    top: 3px;
+}
+
+.flipwing {
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    bottom: 35px;
+    height: 16px;
+    width: 14px;
+}
+
+.teal {
+    background: #F6D160;
+    width: 16px;
+    height: 23px;
+    bottom: 35px;
+}
+
+.teal:after {
+    position: absolute;
+    content: '';
+    background: #0C3545;
+    width: 7px;
+    height: 28px;
+    right: -3px;
+    -webkit-transform: rotate(-16deg);
+    -moz-transform: rotate(-16deg);
+    -o-transform: rotate(-16deg);
+    transform: rotate(-16deg);
+    top: -7px;
+}
+
+.sun {
+    width: 48px;
+    height: 48px;
+    background: #fab92d;
+    border-radius: 50%;
+    border-bottom:5px solid #eaab23;
+    border-right:5px solid #eaab23;
+    right: 352px;
+    top: 90px;
+    z-index: 1;
+}
+
+.main h1 {
+    margin-top: 143px;
+    margin-left: 110px;
+    color: #FFF;
+    font-size: 30px;
+}
+
+.btn-round {
+    padding: 5px 16px;
+    border: 1px solid #0A2B38;
+    border-radius: 50px;
+    transition:0.2s ease;
+}
+
+.contact-btn {
+color: #92ADB8;
+font-size: 17px;
+top: 50%;
+right: 45%;
+position: absolute;
+z-index: 99;
+text-decoration: none;
+}
+
+.contact-btn:hover {
+    background: #219065;
+    color: white
+}
+
+
+
+.relative {
     position: relative;
+}
 
-    #mountains {
-        z-index: 2;
-        position: absolute;
-        bottom: 20%;
-        margin-bottom: -16px;
-        left: 10%;
-    }
+.fume {
+    margin:0px;
+}
 
-    #cloud1 {
-        z-index: 2;
-        position: absolute;
-        top: 20%;
-        right: 4%;
-        animation: bounce 2s ease-in-out 0s infinite alternate;
-    }
+.fume li {
+    background-color: white;
+    border-radius: 50%;
+}
 
-    #cloud2 {
-        z-index: 1;
-        position: absolute;
-        top: 22%;
-        right: 16%;
-        animation: bounce 3.5s ease-in-out 2s infinite alternate;
-    }
+.fume1 {
+    width: 7px;
+    height: 7px;
+    margin-left: 48px;
+    -webkit-animation: smokeup 2.0s linear infinite;
+    -moz-animation: smokeup 2.0s linear infinite;
+    -o-animation: smokeup 2.0s linear infinite;
+    animation: smokeup 2.0s linear infinite;
+}
 
-    .trees {
-        width: 100%;
-        height: 130px;
-        z-index: 4;
-        position: absolute;
-        bottom: 20%;
-        margin-bottom: -100px;
-    }
+.fume2 {
+    width: 9px;
+    height: 9px;
+    margin-left: 38px;
+    -webkit-animation: smokeup 2.1s linear infinite;
+    -moz-animation: smokeup 2.1s linear infinite;
+    -o-animation: smokeup 2.1s linear infinite;
+    animation: smokeup 2.1s linear infinite;}
 
-    #ground {
-        z-index: 1;
-        width: 100%;
-        height: 20%;
-        position: absolute;
-        bottom: 0;
-        background: $greenprimary;
-    }
+.fume3 {
+    width: 12px;
+    height: 12px;
+    margin-left: 48px;
+    -webkit-animation: smokeup 2.2s linear infinite;
+    -moz-animation: smokeup 2.2s linear infinite;
+    -o-animation: smokeup 2.2s linear infinite;
+    animation: smokeup 2.2s linear infinite;}
 
-    #hills {
-        // background: rgba(255,0,0,0.3);
-        position: absolute;
-        left: 10%;
-        margin-left: -120px;
-        margin-bottom: -86px;
-        bottom: 20%;
-        z-index: 3;
-    }
+.fume4 {
+    width: 15px;
+    height: 15px;
+    margin-left: 38px;
+    -webkit-animation: smokeup 2.3s linear infinite;
+    -moz-animation: smokeup 2.3s linear infinite;
+    -o-animation: smokeup 2.3s linear infinite;
+    animation: smokeup 2.3s linear infinite;}
 
-    #stars {
-        width: 100%;
-        height: 100%;
-    }
+@-webkit-keyframes smokeup {
+    0% {margin-bottom:-3px; opacity: 1}
+    80% {margin-bottom:7px; opacity: 0}
+    100% {margin-bottom:7px; opacity: 0}
+}
+
+@-moz-keyframes smokeup {
+    0% {margin-bottom:-3px; opacity: 1}
+    80% {margin-bottom:7px; opacity: 0}
+    100% {margin-bottom:7px; opacity: 0}
+}
+
+@-o-keyframes smokeup {
+    0% {margin-bottom:-3px; opacity: 1}
+    80% {margin-bottom:7px; opacity: 0}
+    100% {margin-bottom:7px; opacity: 0}
+}
+
+@keyframes smokeup {
+    0% {margin-bottom:-3px; opacity: 1}
+    80% {margin-bottom:7px; opacity: 0}
+    100% {margin-bottom:7px; opacity: 0}
+}
+
+
+.r-mountain {
+    border-left: 110px rgba(0, 0, 0, 0) solid;
+    border-right: 110px rgba(0, 0, 0, 0) solid;
+    border-bottom: 170px #B3A385 solid;
+    position: absolute;
+    right: 80px;
+    bottom: 40px;
+}
+
+.r-mountain:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    border-right: 110px rgba(0, 0, 0, 0) solid;
+    border-bottom: 170px #A18E6E solid;
+}
+
+.r-mountain:after {
+    content: '';
+    position: absolute;
+    left: -39px;
+    border-left: 39px rgba(0, 0, 0, 0) solid;
+    border-right: 39px rgba(0, 0, 0, 0) solid;
+    border-bottom: 60px #FFF solid;
+}
+
+.snow {
+    margin: 0px;
+    position: absolute;
+    top: 9px;
+    right: 153px;
+}
+.snow li {
+    background: #FFF;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0px;
+    display: inline-block;
+}
+
+.gl:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 40px;
+    border-radius: 50px;
+    background: #219065;
+    bottom: 36px;
+    left: 0px;
+}
+
+
+.left_m {
+    left: 0px;
+}
+
+
+
+@media (min-width : 420px) and (max-width : 799px) { 
+
+    .max_right { right: -80px; }
+
+
+    .left_m {display: none}
+
+    .cloud_left {display: none;}
+
+}
+
+
+
+@media (min-width : 800px) and (max-width : 1024px) { 
+
+.max_right { right: -80px; }
+
+.left_m {left: -80px;}
+
+
 }
 </style>
 </html>
